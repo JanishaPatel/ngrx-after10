@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  baseUrl: 'http://127.0.0.1:5000/api',
+  FIREBASE_API_KEY: 'AIzaSyAFNm4JsQCSoejGm2jVLcxuiMLW9jpGQj0',
 };

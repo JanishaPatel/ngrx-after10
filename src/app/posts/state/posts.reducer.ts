@@ -4,9 +4,10 @@ import { addPost, deletePost, editPost } from './posts.action';
 
 const _postsReducer = createReducer(
   initialState,
-  on(addPost, (state, action) => {
+  on(addPost, (state:any, action:any) => {
     let post = { ...action.post };
-    post.id = (state.posts.length + 1).toString();
+    post.id = (parseInt(state.posts[state.posts.length - 1].id) + 1).toString();
+    // post.id = (state.posts.length + 1).toString();
     return { ...state, posts: [...state.posts, post] };
   }),
   on(editPost, (state: any, action: any) => {

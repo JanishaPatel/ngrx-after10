@@ -12,7 +12,7 @@ import { AppState } from 'src/app/state/app.state';
   styleUrls: ['./custom-counter-input.component.css'],
 })
 export class CustomCounterInputComponent implements OnInit {
-  value!: number;
+  value!: number|any;
   // compName: string = '';
   compName$!: Observable<string>;
   constructor(private store: Store<AppState>) {}

@@ -19,7 +19,9 @@ export class PostsListComponent implements OnInit {
     // console.log(this.posts);
   }
   onDeletePost(id: string | undefined | any) {
+    //to open a javascript alert box
     if (confirm('Are you sure you want to detete')) {
+      console.log('delete the post');
       this.store.dispatch(deletePost({ id }));
     }
   }
